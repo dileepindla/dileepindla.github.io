@@ -1,29 +1,31 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Hello React</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  </head>
-  <body>
-    <div id="content"></div>
-    <script type="text/jsx">
-      var CommentBox = React.createClass({
-  render: function() {
-    return (
-      <div className="commentBox">
-        Hello, world! I am a CommentBox.
-      </div>
-    );
-  }
+<head>
+<meta charset="UTF-8">
+<title>Fluid DataGrid - jQuery EasyUI Demo</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+$(document).ready(function(){
+var optionValues = [];
+$('#state option').each(function() {
+optionValues.push($(this).val());
+var sizeofselect =optionValues.length;
+alert(sizeofselect);
 });
-React.render(
-  <CommentBox />,
-  document.getElementById('content')
-);
-    </script>
-  </body>
+$('#result').html(optionValues);
+});
+</script>
+</head>
+<body>
+<select id="state">
+<option>state1</option>
+<option>state2</option>
+<option>state3</option>
+<option>state3</option>
+<option>state3</option>
+<option>state3</option>
+<option>state3</option>
+</select>
+<p id="result"></p>
+</body>
 </html>
